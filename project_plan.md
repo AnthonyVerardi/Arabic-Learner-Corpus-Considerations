@@ -1,7 +1,7 @@
 # Project Plan
 
 ## Overview
-In vernacular Arabic, particulary the variety spoken in the Greater Syria/"Levant" region
+In vernacular Arabic, particularly the variety spoken in the Greater Syria/"Levant" region
 (Syria, Lebanon, Jordan, Palestine, and partially Iraq), the "active participle" structure
 is widely used to convey verbal meaning in the present progressive and habitual present.
 Despite its prominence as a structural element of spoken Arabic, there remains little
