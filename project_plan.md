@@ -5,9 +5,6 @@
   * [Data](#data)
   * [Analysis](#analysis)
   * [Presentation](#presentation)
-  
-
-
 
 ## Overview: Arabic Learner Corpus Considerations
 Turns out finding a corpus of written Levantine Arabic was way harder than anticipated, let alone
