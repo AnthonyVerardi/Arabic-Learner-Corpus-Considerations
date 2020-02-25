@@ -1,10 +1,13 @@
 # Project Plan v2
 
 * Table of Contents
-  * [Overview](##Overview:-Arabic-Learner-Corpus-Considerations)
-  * [Data](##Data)
-  * [Analysis](##Analysis)
-  * [Presentation](##Presentation)
+  * [Overview](#overview--arabic-learner-corpus-considerations)
+  * [Data](#data)
+  * [Analysis](#analysis)
+  * [Presentation](#presentation)
+  
+
+
 
 ## Overview: Arabic Learner Corpus Considerations
 Turns out finding a corpus of written Levantine Arabic was way harder than anticipated, let alone
