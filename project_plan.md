@@ -1,7 +1,7 @@
-# Project Plan
+# Project Plan 2.0
 
-## Overview
-In vernacular Arabic, particularly the variety spoken in the Greater Syria/"Levant" region
+## ~~Overview~~
+~~In vernacular Arabic, particularly the variety spoken in the Greater Syria/"Levant" region
 (Syria, Lebanon, Jordan, Palestine, and partially Iraq), the "active participle" structure
 is widely used to convey verbal meaning in the present progressive and habitual present.
 Despite its prominence as a structural element of spoken Arabic, there remains little
@@ -15,4 +15,4 @@ as opposed to more standard ideas of a "verb" in Arabic.
 Ideally, an annotated corpus of spoken Arabic will be used for the purposes
 of this project. Barring that, I plan on exploring ways that I could rely on
 the structural characteristics of active participles to code them myself based
-on data gathered from publicly-scrapable resources like Twitter and Reddit.
+on data gathered from publicly-scrapable resources like Twitter and Reddit.~~
