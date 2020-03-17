@@ -5,4 +5,4 @@ This project is licensed under a Creative Commons Attribution-NonCommercial (CC 
 Choose this license if you want to permit others to share (mirror) and adapt (borrow and alter)
 your mod content, providing that they credit you and don't use your work for commercial purposes.
 
-You can view additional details on [this page](https://creativecommons.org/licenses/by-nc/4.0/).
+You can find a quick overview of the license on [this page](https://creativecommons.org/licenses/by-nc/4.0/).
