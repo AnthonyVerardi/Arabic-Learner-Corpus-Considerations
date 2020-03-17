@@ -49,12 +49,12 @@ very curious to see if the L1-Arabic Standard Arabic learner group is normally d
 It will also be important to consider the varying sample sizes for each group, as the number of 
 L1 Arabic learners far outnumbers any other L1 group. The end goal, in essence, is to try and get
 a sense of just how useful this corpus really is as a resource for research in SLA. As a rough 
-"hypothesis," I am broadly skeptical of the usefulness of this corpus to broader applications
+"hypothesis," I am skeptical of the usefulness of this corpus to broader applications
 beyond being a solid resource for people interested in acquisition of a prestige form of a language
 (Standard Arabic) by both L1 members of that language's colloquiual variety and non-L1 learners from
 other language backgrounds.
 
-I would also be interested in training a Naive Bayes or Hidden Markov Model classifier on data from the
+I would also be interested in training a classifier on data from the
 L1 Arabic vs. Non-L1 Arabic group to see if it is capable of distinguishing between the two. While 
 research in SLA holds that it is not a best practice to compare learners to native speakers
 as a way of assessing proficiency or growth (but rather to compare them to other L2 learners), this

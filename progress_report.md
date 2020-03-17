@@ -22,7 +22,7 @@ for more detailed information.
 
 Aside from rethinking my project's scope, this progress report focused on the following:
 
-### 1. Attempting ~(and mostly completing)~ the data acquisition process
+### 1. Attempting and mostly completing the data acquisition process
 Finding a corpus was about the only thing that went to plan at this stage. The data are available under a Creative Commons license,
 so I'm free to use them for non-commercial purposes as long as I give proper attribution to the original authors. The entire corpus
 is freely available for download from the ALC website in a number of formats (plain text, XML, etc.), so this step was straightforward.
@@ -45,9 +45,10 @@ The corpus I'm using comes with a Creative Commons license already, so I plan on
 anything that results from my work to be used for copying, redistribution, and adaptation for non-commercial purposes and
 given proper attribution. I'm committed to this license because 1) it's in keeping with the licensure of the original work,
 2) it aligns with principles of open science and data sharing, and 3) it doesn't seem to pose any ethical issues with identifiability
-of the learners who were participants and had their data collected. That being said, I will refrain from sharing the entire corpus
-on GitHub, since any reader will be able to download it from the original source. For more specific information, 
-visit [my project's License page.](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/LICENSE.md)
+of the learners who were participants and had their data collected. For more specific information, 
+visit [my project's License page,](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/LICENSE.md)
+which will be further fleshed out in a future update.
 
+## 2nd Progress Report: Data Organization (Part II) and Analysis (Part I)
+March 17, 2020
 
-## 2nd Progress Report: Data Organization (Part II)
