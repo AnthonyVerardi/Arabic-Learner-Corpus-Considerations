@@ -68,17 +68,17 @@ Done; please see the [ALC Data Organization](https://github.com/Data-Science-for
 notebook for this information. In a nutshell, I'm working with all of the 1,585 entries from the original corpus, with 17 columns of data
 for each entry.
 
-### 4. Finalize the sharing scheme of the "found" portion of the data.
+### 4. Finalize the sharing scheme of the "found" portion of the data as well as the license for your own data and project.
 I've elected to maintain the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/)
 that the original corpus was licensed under. This allows for the work to be shared and modified for **non-commercial use**, provided proper 
 attribution to the original authors. It didn't feel right (or legal?) to use a different license here, since the original work did not
 allow for commercial usage of the data.
 
 Unfortunately, GitHub did not allow for all 1,585 XML files to be uploaded to my project's repository, but anyone interested
-in replicating the project can [download the full corpus from the source](https://www.arabiclearnercorpus.com/download-en) (signup/login required).
+in replicating the project can [download the full corpus from the source](https://www.arabiclearnercorpus.com/download-en)
+(signup/login required). I'll removed the 'test_data' folder in favor of just keeping the 'data' folder on GitHub, since removing
+the 'Data' one would mean changing filepaths again. (Any guidance on how to git-rm remove a folder with 152 files?)
 
-### 5. Finalize the license for your data and project.
-
-### 6. Start bringing in the analysis part into your project. In particular, your manipulation of data should be shaped by the linguistic analysis you are after.
+### 5. Start bringing in the analysis part into your project. In particular, your manipulation of data should be shaped by the linguistic analysis you are after.
 To this end, I've created a new Notebook, [ALC Data Analysis](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
-in which I plan to continue my work with the data I've curated. 
+in which I plan to continue my work with the data I've curated.
