@@ -52,3 +52,33 @@ which will be further fleshed out in a future update.
 ## 2nd Progress Report: Data Organization (Part II) and Analysis (Part I)
 March 17, 2020
 
+This progress report focused on the following:
+
+### 1. Completing the data acquisition process
+Already done as of the last progress update; the main issue to work through this time was reading in, cleaning, and (re)organizing data.
+
+### 2. Cleaning and reorganizing the data.
+The information that I'm interested in is now more or less in its final form in a `pandas` `DataFrame` for use, and the final form 
+has been safely pickled and saved locally on my machine. Data were cleaned to remove any NaN values from the "Title" column of the 
+`DataFrame`; otherwise, all of the columns had information present. Additionally, information like tokenized word lists and TTR value
+for the sample was added to each entry.
+
+### 3. Documenting the overall format, shape, and size of the data.
+Done; please see the [ALC Data Organization](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb)
+notebook for this information. In a nutshell, I'm working with all of the 1,585 entries from the original corpus, with 17 columns of data
+for each entry.
+
+### 4. Finalize the sharing scheme of the "found" portion of the data.
+I've elected to maintain the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/)
+that the original corpus was licensed under. This allows for the work to be shared and modified for **non-commercial use**, provided proper 
+attribution to the original authors. It didn't feel right (or legal?) to use a different license here, since the original work did not
+allow for commercial usage of the data.
+
+Unfortunately, GitHub did not allow for all 1,585 XML files to be uploaded to my project's repository, but anyone interested
+in replicating the project can [download the full corpus from the source](https://www.arabiclearnercorpus.com/download-en) (signup/login required).
+
+### 5. Finalize the license for your data and project.
+
+### 6. Start bringing in the analysis part into your project. In particular, your manipulation of data should be shaped by the linguistic analysis you are after.
+To this end, I've created a new Notebook, [ALC Data Analysis](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
+in which I plan to continue my work with the data I've curated. 
