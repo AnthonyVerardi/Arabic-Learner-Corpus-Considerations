@@ -1,6 +1,12 @@
 # Progress Reports
 
-## Preliminary Progress Report: Repository Constructed
+**Table of Contents**
+1. [Preliminary Progress Report](#prelim)
+1. [1st Progress Report](#pr1)
+1. [2nd Progress Report](#pr2)
+1. [3rd Progress Report](#pr3)
+
+## Preliminary Progress Report: Repository Constructed <a name="prelim"></a>
 February 5, 2020
 
 Added:
@@ -10,7 +16,7 @@ Added:
 - `project_plan` that contains a general overview of the project, and will be fleshed out in the future
 - and of course this `progress_report` file
 
-## 1st Progress Report: Rethinking the Project and Data Organization (Part I)
+## 1st Progress Report: Rethinking the Project and Data Organization (Part I) <a name="pr1"></a>
 February 25, 2020
 
 The first thing that became necessary was changing up my whole plan for this project, since
@@ -49,7 +55,7 @@ of the learners who were participants and had their data collected. For more spe
 visit [my project's License page,](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/LICENSE.md)
 which will be further fleshed out in a future update.
 
-## 2nd Progress Report: Data Organization (Part II) and Analysis (Part I)
+## 2nd Progress Report: Data Organization (Part II) and Analysis (Part I) <a name="pr2"></a>
 March 17, 2020
 
 This progress report focused on the following:
@@ -82,3 +88,19 @@ the 'Data' one would mean changing filepaths again. (Any guidance on how to git-
 ### 5. Start bringing in the analysis part into your project. In particular, your manipulation of data should be shaped by the linguistic analysis you are after.
 To this end, I've created a new Notebook, [ALC Data Analysis](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
 in which I plan to continue my work with the data I've curated.
+
+## 3rd Progress Report: Data Organization (Final) and Analysis (Part II) <a name="pr3"></a>
+For this slew of project updates, I focused on [finalizing the form of my data](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb)
+(adding an L1 family column to my `DataFrame` with some help from [Ethnologue](www.ethnologue.com) and attempting [a preliminary run of training an SVC classifier](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
+to identify the L1 family of the writer based on their text. Short story: it didn't go so hot in terms of accuracy, capping at around 65%. It
+seems like the imbalance of L1s represented in the data really is a huge stumbling block, and it makes me wonder if maybe collapsing
+the categories further into "L1 Arabic" and "non-L1 Arabic" is the necessary conclusion to make something usable here. I'm comfortable
+with saying at this point that I'm just interested in seeing if these data are conducive to training a classifier, narrowing the focus
+of my initial broad research interest down from "can this dataset be useful for SLA" toward "can this dataset be useful for ML"? However,
+I'd still like to investigate the distributions of the various subgroups in the data (i.e. TTR broken out by L1 family) and do some more work
+on that. I just feel a bit less comfortable with that task, since figuring out classification has dominated my work up until now. Next step
+is to refine the conclusions drawn from the classifier's performance and take a look around for meaningful patterns in the subgroups.
+
+On a separate note, my license has been up and ready to go since the last update, and you can also now stop by and sign my 
+[Project Guestbook](https://github.com/Data-Science-for-Linguists-2020/Class-Plaza/blob/master/guestbooks/guestbook_anthony.md)
+if it floats your boat!
