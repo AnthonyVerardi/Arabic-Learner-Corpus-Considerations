@@ -13,18 +13,22 @@ each observation of their data.
 
 ## Directory
 ### Folders
-* [Notebooks](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/Notebooks): Jupyter Notebooks that contain all of the coding and much of the analysis done for this project
+* [Notebooks](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/Notebooks): Jupyter Notebooks that contain all of the coding and preliminary analysis done for this project
 	* ALC Data Organization: a Notebook containing my data (re)organization and cleaning process for the ALC dataset
 		* [ALC_Data_Organization (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb)
 		* [ALC_Data_Organization (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb)
 	* ALC Data Analysis: a Notebook containing the actual analysis performed on my restructured version of the ALC
 		* [ALC_Data_Analysis (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
 		* [ALC_Data_Analysis (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
+	* ALC Scrap Code: a "code graveyard" for ideas that didn't pan out and code that didn't work out quite right
+		* [ALC_Data_Organization (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)
+		* [ALC_Data_Organization (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)		
 * [Presentation](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/Presentation): a short presentation outlining the preliminary findings of this project, available as both a full PowerPoint presentation with voiceover or .pdf slides
 * [Data](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/data): samples of the dataset used for this project, namely the first 1000 original XML files (GitHub won't allow me to upload > 1000 files). ***Note: none of the original XML files have been altered!*** The cleaning process was done entirely on imported data in my Organization Notebook, leaving the originals untouched.
 * [Visualizations](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/visualizations): image file copies of all visualizations created over the course of this project
 
 ### Files
+* [.gitignore](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/.gitignore): a list of filetypes my repository is set to ignore on my local rig
 * [final_report.md](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/final_report.md): the final report for this project containing full analysis and conclusions
 * [LICENSE.md](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/LICENSE.md): the license under which this project has been made publicly available; you can find a quick overview of the license on [this page](https://creativecommons.org/licenses/by-nc/4.0/)
 * [README.md](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/README.md): the document you are currently reading!
