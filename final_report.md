@@ -82,6 +82,8 @@ order to build a functional model on potentially sparse data?" and the analysis 
 in mind. That being said, I am also interested in potential insights into the most salient features of native Arabic speaker vs.
 non-native Arabic speaker that a classifier would return, and what they may tell us from a Second Language Acquisition lens.
 
+[Back to Top](#TOP)
+
 ***
 
 ### Data Organization <a name="DOG"></a>
@@ -98,6 +100,7 @@ the text titles](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-
 [tokenizing all of the text data and adding word counts](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb#TOK), 
 and [adding my own calculation for TTR](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Organization.ipynb#TTR).
 
+
 In the end, I actually wound up using less of the metadata than I had anticipated (as well as my TTR calculation and the tokenized texts/titles), but the fact that I saved the `DataFrame`
 and pickled it for my own use in the future will almost certainly prove useful if I want to revisit this project or this corpus. At this point I tried to jump into my analysis,
 but it quickly became clear that there were too many languages represented in the data (66 total different L1s) for me to do what I wanted to do, so I had to return
@@ -106,8 +109,10 @@ from micro-level individual languages to macro-level language families, using [E
 18 categories instead of the initial 66 L1s, which I have visualized as such:
 
 <p align="center">
-<img src="visualizations/ALCL1FamilyCounts.png" alt="ALC L1 Language Family Counts" width="500" height = "500">
+<img src="visualizations/ALCL1FamilyCounts.png" alt="ALC L1 Language Family Text Counts" width="600" height = "600">
 </p>
+
+Since the Indo-European family is so large and typologically diverse, I decided to go one level down and break it into Indo-Iranian, Germanic, Balto-Slavic, and Italic.
 
 The final return to my organization notebook came at the close of this project when I decided to further collapse the languages and rely instead on 
 "Nativeness" (as opposed to non-L1 Arabic speaker status), which was originally a tag that I had not imported. This equated to simply adding one new
@@ -115,25 +120,118 @@ thing to my `DataFrame` using `BeautifulSoup` again, and gave me this result tha
 is very even:
 
 <p align="center">
-<img src="visualizations/TextCountsNASandNNAS.png" alt="ALC L1 Language Family Counts" width="500" height = "500" align="middle">
+<img src="visualizations/TextCountsNASandNNAS.png" alt="ALC L1 Nativeness Text Counts" width="500" height = "500" align="middle">
 </p>
 
-With all relevant data finally collected and curated, I turned to beginning the analysis portion of this project.
+With all relevant data finally collected and curated, I began to work on the analysis portion of this project as detailed below.
 
+[Back to Top](#TOP)
 
 ***
 
 ### Data Analysis <a name="DAL"></a>
 
+When turning to the analysis, I had initially wanted to lean more into [measures of dispersion and central tendency with the subgroups](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb#subgroups)
+that emerged in this dataset, like the different language families. In the end, I decided against examining more than just text length, since it was the most
+directly relevant variable for building a classifier. While my original goal had been to determine whether these data could be used for inferential statistics,
+I focused instead on what considerations could be made for training a classifier, and concluded that the more even the text distributions (both in terms of
+the raw number of texts per language/nativeness group and the length of the texts within this groups), the better my classifier was likely to perform.
+
+Comparing violin plots of the text length values by L1 family (top) and the text length values by nativeness (bottom), we see that the uniformity of these
+data increases as the number of categories decreases. In other words, collapsing the L1 data into "Arabic" vs. "non-Arabic" homogenizes the samples.
+
+<p align="center">
+<img src="visualizations/ALCTextLenByL1.png" alt="ALC Text Length by L1 Family" width="500" height = "500">
+</p>
+
+<p align="center">
+<img src="visualizations/ALCTextLenByNativeness.png" alt="ALC Text Length by Nativeness" width="500" height = "500">
+</p>
+
+While these visualizations don't necessarily reflect anything about the classifier, I think it's important to consider their implications for the corpus
+as a whole. It turns out that despite the imbalance in total number of texts between the Arabic L1 group and the other L1 groups, the texts that do exist
+in the other groups are reasonably well-distributed with regard to their text length. This holds as well for a pure native vs. non-native comparison, which
+I take to mean this corpus may be most useful in comparing exactly those two groups and nothing more granular in order to maximize the similarity of participant
+groups.
+
+Moving past the dispersion of the data in terms of text length, training a classifier proved to be fairly straightforward once I got past a hurdle of [needing
+to use a different model than intended](#PRH). Interestingly, despite using the same data to train on (Tf-Idf vectorized texts), the two classifiers
+I built ([one for L1 family](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb#GCV) 
+and [one for nativeness](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb#GCV2)) 
+ended up having different combinations of best parameters, which demonstrates it's always a good idea to play around with these settings even when 
+using the same data.
+
+The [final, best-tuned model](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb#FINMNB) 
+of the first classifier, intended to classify the L1 of the writer, didn't end up performing very well in comparison to other classifiers that
+we've worked with over the course of the term. The highest accuracy it ever reached was 63.09%, which given a roughly 50% chance to get classification correct
+just by labeling everything as "Arabic" doesn't seem spectacular. After plotting its performance as a confusion matrix, we can see that it never manages to correctly
+classify all members of a non-Arabic category as their correct selves, and sometimes mislabels all members of a category (Albanian, AustroAsiatic, SinoTib, etc.) entirely:
+
+<p align="center">
+<img src="visualizations/L1ConfusionMatrix.png" alt="L1 Family Confusion Matrix" width="500" height = "500">
+</p>
+
+The texts written by members of the Kra-Dai language family, to which Thai belongs, proved particularly difficult for the classifier: a few members of other
+categories were classified as it instead of as Arabic or another language moreso than any other L1 family. Austronesian and Indo-Iranian showed a similar
+difficulty, but to a lesser degree.
+
+Finally, in examining the most informative features that went into building the L1 family classifier, we can possibly begin to get an idea of the types
+of learners that this corpus is made of. The words evidenced in the non-Arabic categories are almost always content words, and relatively straightforward,
+concrete ones at that, like "China" or "country" or even "Al-Qur'an". Across all categories, the prominence of Islamic influence can be seen, as multiple 
+language groups include markedly religious terms as features; as Dr. Heath led me to realize, this system of classification may be more indicative of geopolitical or
+cultural influence on their language than anything else. On the other hand, the native Arabic category's most informative features were more populated by
+prepositions and other function words, indicating that the classifier, for this group, seemingly deemed morphosyntax more informative than lexis. Whether this
+is indicative of an underuse or misuse of morphosyntactic elements in the learners' text production is another research question entirely, but important to consider
+as a next step.
+
+This is in stark contrast to [my other classifier](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb#FINMNB2),
+which only had to decide whether a text was written by a native Arabic speaker or not. The final iteration of this classifier was able to predict labels
+with 89.91% accuracy:
+
+<p align="center">
+<img src="visualizations/NativenessConfusionMatrix.png" alt="Nativeness Confusion Matrix" width="500" height = "500">
+</p>
+
+Although this is still set against a roughly 50% baseline, it's a stark improvement over the first model. 
+That being said, while I can understand mislabeling non-native speaker texts as those written by native speakers in the case of advanced proficiency learners, it is genuinely
+surprising to me that the classifier mislabeled any native Arabic speaker-produced texts as being written by a non-native speaker. This may be a case where
+text length itself has a strong effect on classification; a shorter, highly-topical text by a native Arabic speaker may well be mislabeled. The most informative
+features were more similar this time around, with a greater number of function words and morphosyntactic elements (like a negation particle) present in the 
+learner most informative feature. In fact, the native speaker features showed a higher number of words related to Islam this time around, such as "Islam",
+"Islamic", and "Sharia". This makes sense when considering that the native speaker plans of study may well include religion or law as an aspect of their education,
+which may not be true in the case of non-native speakers.
+
+[Back to Top](#TOP)
+
 ***
 
 ### Project History <a name="PRH"></a>
 Aside from the [above difficulties in initially getting `BeautifulSoup` to work](#DOG), this project was seldom marred by gross setbacks or stumbling blocks
-(COVID-19 notwithstanding). 
+(COVID-19 notwithstanding). I don't count having to go back and forth between analysis and organization as a setback by any means, I just see it as the development
+of my research question organically over time as opposed to being set in stone from the outset. Additionally, despite my intial fears about working with a language 
+that is written from right-to-left instead of left-to-right like English, this never became an issue with the tasks that I performed; even tokenizing returned
+the lists of tokens in the correct order.
+
+I did set out to try building a [Support Vector Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) instead of the 
+Multinomial Naïve-Bayes model that I eventually settled on, but this ended up [being a lost cause](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb#SVC-Classifier-Trial-Run-)
+when I was unable to grab the most infomrative features that had been used to build the model. The only other things that landed in the scrapyard were [two
+visualizations I'd made of the distribution of the TTR values](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb#SVC-Classifier-Trial-Run-), 
+since they had become irrelevant to my analysis. 
+
+[Back to Top](#TOP)
 
 ***
 
 ### Conclusion <a name="CON"></a>
+Revisiting my research question, my conclusion is such: it is indeed possible to build a functional, well-performing classifier using this dataset,
+but not for everything. L1 family proved too much to do with just text alone (I was never able to get a grasp on feature union, which is yet another
+way I would like to revisit this project in the future), but Nativeness proved far more achievable. As for the challenges that had to be overcome,
+unevenness of subgroup sizes seems to have clearly played a role, as well as the mysterious combination of parameters that I still don't fully comprehend.
+Still, over the course of the semester, I've grown fond of this corpus and its quirks. This has been a valuable learning experience with respect to learning
+how to be fair and ask appropriate questions, and knowing what I know now about statistics (both from this course and another statistics-based course),
+I would love to be able to ask new questions of this dataset and try different types of analyses. As they say, hindsight is 20/20!
+
+[Back to Top](#TOP)
 
 ***
 
@@ -146,3 +244,5 @@ Aside from the [above difficulties in initially getting `BeautifulSoup` to work]
 > Alhawary, M. T. (Ed.) (2018). Routledge Handbook of Arabic Second Language Acquisition (1 	ed.). London: Routledge.
 
 > Zaghouani, Wajdi. (2014) Critical Survey of the Freely Available Arabic Corpora. Published in 	the Proceedings of the International Conference on Language Resources and Evaluation 	(LREC'2014), OSACT Workshop. Reykjavik, Iceland, 	26-31 May 2014
+
+[Back to Top](#TOP)
