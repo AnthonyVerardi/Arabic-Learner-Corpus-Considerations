@@ -105,14 +105,18 @@ to organization. I decided to [collapse the L1 data](https://nbviewer.jupyter.or
 from micro-level individual languages to macro-level language families, using [Ethnologue](https://www.ethnologue.com) as a guide. This left me with a far more manageable 
 18 categories instead of the initial 66 L1s, which I have visualized as such:
 
-<img src="visualizations/ALCL1FamilyCounts.png" alt="ALC L1 Language Family Counts" width="500" height = "500" align="middle">
+<p align="center">
+<img src="visualizations/ALCL1FamilyCounts.png" alt="ALC L1 Language Family Counts" width="500" height = "500">
+</p>
 
 The final return to my organization notebook came at the close of this project when I decided to further collapse the languages and rely instead on 
 "Nativeness" (as opposed to non-L1 Arabic speaker status), which was originally a tag that I had not imported. This equated to simply adding one new
 thing to my `DataFrame` using `BeautifulSoup` again, and gave me this result that shows the proportion of native speaker texts to non-native speaker texts
 is very even:
 
+<p align="center">
 <img src="visualizations/TextCountsNASandNNAS.png" alt="ALC L1 Language Family Counts" width="500" height = "500" align="middle">
+</p>
 
 With all relevant data finally collected and curated, I turned to beginning the analysis portion of this project.
 
