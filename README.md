@@ -21,8 +21,8 @@ each observation of their data.
 		* [ALC_Data_Analysis (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
 		* [ALC_Data_Analysis (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Data_Analysis.ipynb)
 	* ALC Scrap Code: a "code graveyard" for ideas that didn't pan out and code that didn't work out quite right
-		* [ALC_Data_Organization (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)
-		* [ALC_Data_Organization (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)		
+		* [ALC_Scrap_Code (GitHub Style)](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)
+		* [ALC_Scrap_Code (Jupyter Style)](https://nbviewer.jupyter.org/github/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/blob/master/Notebooks/ALC_Scrap_Code.ipynb)		
 * [Presentation](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/Presentation): a short presentation outlining the preliminary findings of this project, available as both a full PowerPoint presentation with voiceover or .pdf slides
 * [Data](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/data): samples of the dataset used for this project, namely the first 1000 original XML files (GitHub won't allow me to upload > 1000 files). ***Note: none of the original XML files have been altered!*** The cleaning process was done entirely on imported data in my Organization Notebook, leaving the originals untouched.
 * [Visualizations](https://github.com/Data-Science-for-Linguists-2020/Arabic-Learner-Corpus-Considerations/tree/master/visualizations): image file copies of all visualizations created over the course of this project
