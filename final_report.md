@@ -141,7 +141,7 @@ Comparing violin plots of the text length values by L1 family (top) and the text
 data increases as the number of categories decreases. In other words, collapsing the L1 data into "Arabic" vs. "non-Arabic" homogenizes the samples.
 
 <p align="center">
-<img src="visualizations/ALCTextLenByL1.png" alt="ALC Text Length by L1 Family" width="800" height = "500">
+<img src="visualizations/ALCTextLenByL1.png" alt="ALC Text Length by L1 Family">
 </p>
 
 <p align="center">
